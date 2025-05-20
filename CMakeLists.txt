@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(PNC_MAP_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/pnc_map)
 set(PROCESS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/process)
+set(SHOW_RESULT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/show_result)
 
 # 添加子目录
 add_subdirectory(src)
