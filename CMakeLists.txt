@@ -14,5 +14,16 @@ set(PNC_MAP_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/pnc_map)
 set(PROCESS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/process)
 set(SHOW_RESULT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/show_result)
 
+# 添加三方库
+set(EIGEN3_INCLUDE_DIR "/usr/local/include/eigen-3.4.0")
+list(APPEND CMAKE_MODULE_PATH "${EIGEN3_INCLUDE_DIR}/cmake")
+message("CMAKE_MODULE_PATH = ${CMAKE_MODULE_PATH}")
+
+find_package(Eigen3 3.4 REQUIRED)
+if(TARGET Eigen3::Eigen)
+message(STATUS "****************eigen-3.4.0 founf in ${EIGEN3_INCLUDE_DIR}*****************")
+endif()
+
+
 # 添加子目录
 add_subdirectory(src)
